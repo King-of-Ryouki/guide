@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_setting"
+        android:orderInCategory="1"
+        android:title="@string/action_setting"
+        app:showAsAction="never"
+        app:showAsAction="ifRoom"
+        app:showAsAction="always"
+        app:showAsAction="withText" />
+    <!-- android:orderInCategory="1"  選項順序 -->
+    <!--  -->
+    <!-- app:showAsAction="never"     不會顯示在Action區域 -->
+    <!-- app:showAsAction="ifRoom"    若Action區域有空間，就會顯示 -->
+    <!-- app:showAsAction="always"    無論如何都會顯示在Action區域上，但不建議使用此值 -->
+    <!-- app:showAsAction="withText"  除了icon圖示外，也顯示item的標題文字 -->
+</menu>

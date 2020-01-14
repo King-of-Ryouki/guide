@@ -1,0 +1,71 @@
+<!-- JavaGuideXml -->
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/shape_border_press" android:state_pressed="true" />
+    <item android:drawable="@drawable/shape_border_nor" android:state_window_focused="false" />
+</selector>
+
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    tools:context=".MainActivity">
+    <!-- * -->
+    <!-- * -->
+    <!-- * -->
+    <!-- 布局 垂直 -->
+    <LinearLayout android:orientation="vertical"></LinearLayout>
+    <!-- * -->
+    <!-- * -->
+    <!-- * -->
+    <!-- button 狀態 : -->
+    <!-- button 被按下 -->
+    <item  android:state_pressed="true" android:drawable="@drawable/button_pressed" />
+    <!-- button 被焦點 -->
+    <item android:state_focused="true" android:drawable="@drawable/button_focused" />
+    <!-- 啥事都沒有 -->
+    <item android:state_focused="false" android:state_pressed="false" android:drawable="@drawable/button_normal" />
+    <!-- * -->
+    <!-- * -->
+    <!-- * -->
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <!-- * -->
+    <!-- * -->
+    <!-- * -->
+    <!-- ^^^ button 狀態 -->
+    <!-- 按壓 -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <!--rectangle 長方形 可以畫出直角形，圓角形，弧形等-->
+            <corners android:radius="15dip" />
+            <!--設定圓角，當設置的圓角半徑很大，就可變成弧形邊了-->
+            <stroke android:width="1dip" android:color="#538394" />
+            <!--邊框-->
+            <gradient android:angle="-90" android:startColor="#0099CC" android:endColor="#017DAB" />
+            <!--漸層顏色-->
+        </shape>
+    </item>
+    <ImageView
+            android:id="@+id/img"
+            android:layout_width="380dp"
+            android:layout_height="440dp"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            app:srcCompat="@android:color/background_dark"
+            android:gravity　="center"
+            android:layout_gravity="center" />
+    <!--属性是对该view中内容的限定．比如一个button 上面的text. 你可以设置该text 相对于view的靠左，靠右等位置Q-->
+    <!-- 是用来设置该view相对与父view 的位置．比如一个button 在linearlayout里，你想把该button放在linearlayout里靠左、靠右等位置就可以通过该属性设置．  -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
